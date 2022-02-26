@@ -18,37 +18,27 @@ public class ex09_forEx {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("시작숫자 입력 >> ");
+		System.out.println("시작숫자 >> ");
 		int sNum = sc.nextInt();
-		System.out.println("끝숫자 입력 >> ");
+		
+		System.out.println("끝숫자 >> ");
 		int lNum = sc.nextInt();
 		
 		int sum = 0;
-		int max;
-		int min;
-		int i;
+	
+		for(int i = sNum; i<=lNum; i++){
+	        sum += i;
+	        // sum = sum + i;
+	        // 계산된 sum값 = 이전 sum값 + i
+	        
+            if(i<lNum){
+            	System.out.print("+");
+            } 
+            
+		}
 		
-		if(sNum>lNum){
-	        max = sNum;
-	        min = lNum;
-	    } else{
-	        max = lNum;
-	        min = sNum;
-	    }
-
-		
-		 for(i=min; i<=max; i++){
-		        sum = sum + i;
-		            if(i<max){
-		            	System.out.println(i + "+");
-		            } else{
-		            	System.out.println(i + "=" + sum);
-		            }
-		    }
-		
-		
-		
-
+		System.out.println("= " + sum);
+	            
 	}
 
 }
